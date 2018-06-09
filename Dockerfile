@@ -4,6 +4,10 @@ USER root
 
 RUN apt-get update
 
+
+RUN pip install bash_kernel
+RUN python -m bash_kernel.install
+
 RUN apt-get install -y openssh-server telnet
 RUN mkdir /var/run/sshd
 
